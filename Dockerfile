@@ -19,8 +19,9 @@ FROM eclipse-temurin:17-alpine@sha256:f4766a483f0754930109771aebccb93c6e7a228b19
 RUN apk add dumb-init
 RUN mkdir /app
 RUN addgroup --system javauser && adduser -S -s /bin/false -G javauser javauser
-COPY --from=build /project/target/app-ci-cd-1.0.0.jar /app/app-ci-cd-1.0.0.jar
+COPY --from=build /project/target/loan-service-1.0.0.jar /app/loan-service-1.0.0.jar
 WORKDIR /app
 RUN chown -R javauser:javauser /app
 USER javauser
-CMD "dumb-init" "java" "-jar" "app-ci-cd-1.0.0.jar"
+EXPOSE 8081
+CMD "dumb-init" "java" "-jar" "loan-service-1.0.0.jar"
