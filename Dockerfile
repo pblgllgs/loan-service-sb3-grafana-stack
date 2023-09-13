@@ -23,5 +23,5 @@ COPY --from=build /project/target/loan-service-1.0.0.jar /app/loan-service-1.0.0
 WORKDIR /app
 RUN chown -R javauser:javauser /app
 USER javauser
-EXPOSE 8081
+EXPOSE 8080
 CMD "dumb-init" "java" "-jar" "loan-service-1.0.0.jar"
