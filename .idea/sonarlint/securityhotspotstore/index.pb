@@ -9,3 +9,5 @@ Ksrc/main/java/com/programming/techie/loans/client/FraudDetectionClient.java,8\
 :
 
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
+w
+Gsrc/main/java/com/programming/techie/loans/config/RestClientConfig.java,1\1\114520323e0c0a3dcd8fd4f155e8491f5b545759
