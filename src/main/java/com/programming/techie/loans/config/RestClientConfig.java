@@ -10,7 +10,7 @@ public class RestClientConfig {
     @Bean
     RestClient restClient(RestClient.Builder builder) {
         return builder
-                .baseUrl("http://localhost:8081")
+                .baseUrl("http://fraud-service:8081")
                 .build();
     }
 }
